@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+{% extends "homepage.html"%}
+{% block title %}About Me{% endblock %}
+
+{% block head%}
+  {{ super() }}
+{% endblock%}
+
+{% block page_content%}
+  <!-- Page Content -->
+  <div class="container">
+    <h1 class="mt-5"><i class="fa fa-address-card-o" aria-hidden="true"></i> ABOUT ME</h1>
+    <h3>PROGRAMMING LANGUAGE & TOOLS</h3>
+    <p>
+      I have experience in the following programming languages:
+    </p>
+    <ul class="list-inline">
+      <li class="list-inline-item">
+        <a class="btn-social btn-outline" href="#">
+          <i class="icon-css3"></i> icon-css3
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-social btn-outline" href="#">
+          <i class="icon-javascript"></i> icon-javascript
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-social btn-outline" href="#">
+          <i class="icon-python"></i> icon-python
+        </a>
+      </li>
+    </ul>
+
+    <p>This project is developed by <a id="developer" href="https://github.com/gichehak" data-toggle="tooltip" data-placement="top" title="I'm currently a senior at University of Delaware">Kevin Gicheha</a>.</p>
+
+  </div>
+{% endblock%}
+
+{% block scripts%}
+  {{super()}}
+  <script>
+  $(document).ready(function () {
+    $('#developer').tooltip()
+  });
+  </script>
+{% endblock%}

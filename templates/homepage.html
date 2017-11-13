@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% block head %}
+  <title>{% block title%}{% endblock%} - Resume</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <!-- Fontawesome CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Resume CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/myresume.css') }}">
+  {% endblock%}
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="{{ url_for('static', filename='img/resume.jpg') }}"
+         alt="Resume" width="150">
+       </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home
+               <span class="sr-only">(current)</span>
+             </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/courses">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="profile_info">
+    <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="static/img/profile.jpg" alt="">
+          <img src="static/img/logo.png" alt="">
+    </span>
+
+  </div>
+<p class = "para">
+  I'm experienced in both project management and financial planning. I'm currently working to get my
+  Bachelors degree in Finance and Management Information Systems.
+</p>
+  <div class="social_media">
+    <h3>My Social Media Accounts:</h3>
+    <ul class="list-inline">
+      <li class="list-inline-item">
+        <a class="btn-social btn-outline" href="#">
+          <i class="fa fa-fw fa-facebook"></i>
+          <img src="http://www.facebook.com" alt="">
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-social btn-outline" href="#">
+          <i class="fa fa-fw fa-twitter"></i>
+          <img src="http://www.twitter.com" alt="">
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-social btn-outline" href="#">
+          <i class="fa fa-fw fa-google-plus"></i>
+          <img src="http://www.google.com" alt="">
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-social btn-outline" href="#">
+          <i class="fa fa-fw fa-linkedin"></i>
+          <img src="http://www.linkedin.com" alt="">
+        </a>
+      </li>
+    </ul>
+    </div>
+
+  {% block page_content%}
+  {% endblock%}
+
+  {% block scripts%}
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  {% endblock%}
+</body>
+
+</html>

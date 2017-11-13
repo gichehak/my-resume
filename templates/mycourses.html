@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+{% extends "homepage.html"%}
+{% block title %}My Courses{% endblock %}
+{% block head%}
+  {{ super() }}
+{% endblock%}
+{% block page_content%}
+
+  <!-- Page Content -->
+ <img style="align: middle;" src="static/img/logo.png" alt="">
+  <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h1 class="mt-5">MY COURSES</h1>
+              <p class="lead">These are the related coures:</p>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  <ul>
+        {% for courses in courses %}
+          <li>{{courses}}</li>
+        {% endfor%}
+    </ul>
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Course Description</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Examines the international monetary environment and its impact on financial planning for the firm.
+        Topics include exchange rates, currency restrictions, tax regulations,
+        direct investment theory, capital budgeting, financing, risk management, and working capital management.
+      </div>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="container">
+        <div class="row">
+        <div class="col-lg-12 text-center">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        <ul>
+      {% for courses in courses %}
+        <li>{{courses}}</li>
+      {% endfor%}
+  </ul>
+
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" >Course Description</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Covers the design and implementation of enterprise databases in the business environment.
+              A networked setting and its effect on database management will be emphasized.
+            </div>
+
+          </div>
+        </div>
+      </div>
+                  </div>
+                  </div>
+                  </div>
+
+   <div class="container">
+                  <div class="row">
+                  <div class="col-lg-12 text-center">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                  <ul>
+        {% for courses in courses %}
+          <li>{{courses}}</li>
+        {% endfor%}
+    </ul>
+
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" >Course Description</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        This capstone seminar course studies three different intersections of topics in global corporate finance:
+                        the intersections of a) currency and interest rate risk management,
+                        b) capital raising and securities market trading, and c) strategy and international financial management.
+                        The course emphasizes reports, exercises, cases, discussions, presentations, and analysis of financial news.
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                            </div>
+                            </div>
+                            </div>
+
+
+<script src="modal.js"></script>
+
+
+{% endblock%}
