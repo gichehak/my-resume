@@ -7,20 +7,24 @@
 {% endblock%}
 {% block page_content%}
 
-  <!-- Page Content -->
- <img style="display: block; margin: auto; width: 50%;" src="static/img/logo.png" alt="">
-  <div class="container">
-          <div class="row">
-            <div class="col-lg-12 text-center">
-              <h1 class="mt-5">MY COURSES</h1>
-              <p class="lead">These are the related courses:</p>
+<!-- Page Content -->
+
+<div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="container">
+                <h1 class="mt-5"> <i class="fa fa-user-circle" aria-hidden="true"></i> MY COURSES:</h1>
+                <p class="lead">These are the related courses:</p>
+                <ul>
+                    {% for courses in courses %}
+                      <li style="list-style-type: none;">{{courses}}</li>
+                    {% endfor%}
+                </ul>
+
+              </div>
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  <ul>
-        {% for courses in courses %}
-          <li>{{courses}}</li>
-        {% endfor%}
-    </ul>
+  International Finance
 </button>
 
 <!-- Modal -->
@@ -41,22 +45,9 @@
     </div>
   </div>
 </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="container">
-        <div class="row">
-        <div class="col-lg-12 text-center">
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        <ul>
-      {% for courses in courses %}
-        <li>{{courses}}</li>
-      {% endfor%}
-  </ul>
-
+      <button  type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Database Design and Implementation
       </button>
 
       <!-- Modal -->
@@ -77,24 +68,11 @@
           </div>
         </div>
       </div>
-                  </div>
-                  </div>
-                  </div>
-
-   <div class="container">
-                  <div class="row">
-                  <div class="col-lg-12 text-center">
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                  <ul>
-        {% for courses in courses %}
-          <li>{{courses}}</li>
-        {% endfor%}
-    </ul>
-
-                </button>
-
-                <!-- Modal -->
+<!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Advanced Corporate Finance
+      </button>
+<!-- Modal -->
                 <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -117,7 +95,6 @@
                             </div>
                             </div>
                             </div>
-
 
 <script src="modal.js"></script>
 
