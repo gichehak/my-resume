@@ -22,7 +22,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="/">
-        <img src="{{ url_for('static', filename='img/resume.jpg') }}"
+        <img src="{{ url_for('static', filename='img/r_logo.jpg') }}"
          alt="Resume" width="150">
        </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -86,7 +86,12 @@
       </li>
     </ul>
     </div>
-
+  {% for category, message in get_flashed_messages(with_categories=true) %}
+      <div class="alert alert-{{category}}">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ message }}
+      </div>
+  {% endfor %}
   {% block page_content%}
   {% endblock%}
 
