@@ -21,3 +21,7 @@ h1 {
 }
 .list-inline-item{
       display: inline-block;
+}
+.bottom-margin {
+      margin-bottom: 10px;
+}
