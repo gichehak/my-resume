@@ -91,7 +91,7 @@ def add_courses():
         course_number = request.form['course_number']
         description = request.form['description']
         professor_name = request.form['professor']
-        artist = Artist.query.filter_by(name=professor_name).first()
+        professor = Professor.query.filter_by(name=professor_name).first()
         course = Course(name=name, course_number=course_number, description=description, professor=professor)
 
         # insert the data into the database

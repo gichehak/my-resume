@@ -12,9 +12,11 @@ def deploy():
     thomas_Trinter = Professor(name='Thomas Trinter', department='Finance')
     clinton_White = Professor(name='Clinton White', department='Management Information Systems')
     mark_Serva = Professor(name='Mark Serva', department='Management Information Systems')
+    edward_Hortono = Professor(name='Edward Hortono', department='Management Information Systems')
     db.session.add(clinton_White)
     db.session.add(thomas_Trinter)
     db.session.add(mark_Serva)
+    db.session.add(edward_Hortono)
     db.session.commit()
 
 
