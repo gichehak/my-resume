@@ -103,7 +103,7 @@ def add_courses():
 @app.route('/course/edit/<int:id>', methods=['GET', 'POST'])
 def edit_course(id):
     course = Course.query.filter_by(id=id).first()
-    courses = Course.query.all()
+    professors = Professor.query.all()
     if request.method == 'GET':
         return render_template('course-edit.html', course=course, professors=professors)
     if request.method == 'POST':
